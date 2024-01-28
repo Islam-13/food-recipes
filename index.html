@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yummy</title>
+    <link rel="shortcut icon" href="./logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- loading page -->
+    <div class="loading-page fixed-top w-100 h-100">
+      <div class="d-flex align-items-center justify-content-center h-100">
+        <span class="loader"></span>
+      </div>
+    </div>
+
+    <!-- side navbar -->
+    <nav class="side-nav position-fixed top-0 min-vh-100 d-flex">
+      <div
+        class="d-flex flex-column justify-content-between p-4 text-white bg-black"
+      >
+        <ul class="nav-links overflow-hidden">
+          <li class="nav-link">search</li>
+          <li class="nav-link">categories</li>
+          <li class="nav-link">area</li>
+          <li class="nav-link">ingredients</li>
+          <li class="nav-link">contact</li>
+        </ul>
+        <div class="nav-footer">
+          <ul class="social-icons d-flex align-items-center gap-2">
+            <li>
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                class="nav-link"
+              >
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com" target="_blank" class="nav-link">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                class="nav-link"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </li>
+          </ul>
+          <p>Copyright Â© 2019 All Rights <br />Reserved.</p>
+        </div>
+      </div>
+
+      <div
+        class="bg-white d-flex flex-column justify-content-between align-items-center py-4 px-2"
+      >
+        <img src="/logo.png" alt="" />
+        <i class="fa-solid fa-2x fa-align-justify toggle-icon"></i>
+        <div>
+          <i class="fa-solid fa-globe d-block"></i>
+          <i class="fa-solid fa-share-nodes"></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- search -->
+    <div id="search" class="m-l-65">
+      <div class="container">
+        <div class="row g-4 py-4">
+          <div class="col-md-6">
+            <div>
+              <input
+                type="text"
+                id="nameSearch"
+                class="form-control bg-transparent text-white search-name"
+                placeholder="Search By Name"
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div>
+              <input
+                type="text"
+                id="fLetterSearch"
+                maxlength="1"
+                class="form-control bg-transparent text-white search-letter"
+                placeholder="Search By First Letter"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- contact -->
+    <div id="contact" class="m-l-65">
+      <div class="container w-75 min-vh-100 d-flex align-items-center">
+        <form>
+          <div class="row g-4 py-5">
+            <div class="col-md-6">
+              <div>
+                <input
+                  type="text"
+                  name="urName"
+                  class="form-control nameInput"
+                  placeholder="Enter Your Name"
+                  required
+                />
+                <p class="alert-msg name-alert mb-0 mt-2 rounded">
+                  Please enter a valid name.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div>
+                <input
+                  type="email"
+                  name="urEmail"
+                  class="form-control emailInput"
+                  placeholder="Enter Your Email"
+                  required
+                />
+                <p class="alert-msg email-alert mb-0 mt-2 rounded">
+                  Email is not valid !!
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div>
+                <input
+                  type="tel"
+                  name="urPhone"
+                  class="form-control phoneInput"
+                  placeholder="Enter Your Phone"
+                  required
+                />
+                <p class="alert-msg phone-alert mb-0 mt-2 rounded">
+                  Phone number is not valid !!
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div>
+                <input
+                  type="number"
+                  name="urAge"
+                  class="form-control ageInput"
+                  placeholder="Enter Your Age"
+                  required
+                />
+                <p class="alert-msg age-alert mb-0 mt-2 rounded">
+                  Age is not valid !!
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div>
+                <input
+                  type="password"
+                  name="urPassword"
+                  class="form-control passwordInput"
+                  placeholder="Enter Your Password"
+                  required
+                />
+                <p class="alert-msg password-alert mb-0 mt-2 rounded">
+                  Enter valid password *Minimum 8 chars, at least one letter and
+                  one number*
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div>
+                <input
+                  type="password"
+                  name="urRepassword"
+                  class="form-control repasswordInput"
+                  placeholder="Repassword"
+                  required
+                />
+                <p class="alert-msg repassword-alert mb-0 mt-2 rounded">
+                  Password is not matched !!
+                </p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="submit-btn btn btn-outline-danger d-block m-auto"
+            disabled
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- display Data -->
+    <main class="m-l-65">
+      <div class="container">
+        <div class="row g-4 py-5 data-container position-relative"></div>
+      </div>
+    </main>
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
